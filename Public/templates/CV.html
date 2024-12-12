@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Asset/Icon/icon.png">
+    <title>Portfolio - CV</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <header style="position: fixed;" class="header-content-cv">
+        <div class="container header-container">
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <h1 class="name"><img src="../../Asset/Icon/code_logo.svg" alt="Logo"> TROUBA Mael</h1>
+            <h3 class="title">Game engine programmer </h3>
+            <button class="contact" onclick="openContactModal()">Contact me</button>
+        </div>
+    </header>
+    
+    <div class="modal_overlay" hidden>
+        <div class="modal_contact">
+          <button class="close-btn" onclick="closeContactModal()">X</button>
+          
+          <label class="label" for="subject-contact">Subject</label>
+          <input id="subject-contact" class="subject-contact" placeholder="Subject" oninput="checkFormCompletion()">
+
+          <label class="label" for="content-contact">Email</label>
+          <input id="email-contact" class="email-contact" placeholder="Email" oninput="checkFormCompletion()">
+          
+          <label class="label" for="content-contact">Content</label>
+          <input id="content-contact" class="content-contact" placeholder="Content" oninput="checkFormCompletion()">
+          
+          <button id="submit-btn" class="submit-btn" onclick="closeContactModalSubmit()" disabled>Submit</button>
+        </div>
+      </div>
+      
+      <div id="toast" class="toast hidden"></div>
+    
+    <div id="star-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+    
+    <aside id="sidebar">
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Accueil</a></li>
+                <li><a href="../templates/CV.html">CV</a></li>
+                <li><a href="../templates/projet.html">Projets</a></li>
+            </ul>
+        </nav>
+        <div class="social">
+            <a href="https://github.com/MaelEtuu"><img class="img-social" src="../../Asset/Icon/github-icon.svg"></a>
+            <a href="mailto:mael.trouba@etu.univ-smb.fr">
+                <img class="img-social" src="../../Asset/Icon/gmail-icon.svg" alt="Gmail Icon">
+            </a>
+            <a href="https://www.linkedin.com/in/ma%C3%ABl-trouba-66b2a633a"><img class="img-social" src="../../Asset/Icon/linkedin-icon.svg"></a>
+            <a href="https://www.instagram.com/mael.trb73?igsh=MTI5ZHR0ZjUyYzR6bA%3D%3D&utm_source=qr"><img class="img-social" src="../../Asset/Icon/insta-icon.svg"></a>
+        </div>    
+    </aside>
+    <section class="cv-section">
+        <div class="installcvbtn" onclick="window.open('../../Asset/PDF/CV Anglais.pdf', '_blank');">PDF - CV</div>
+        <div class="cv-container">
+            <h2>Curriculum Vitae - Maël Trouba</h2>
+    
+            <!-- Section 1: Personal Information -->
+            <div class="section personal-info">
+                <h3>Personal Information</h3>
+                <p><strong>First Name:</strong> Maël</p>
+                <p><strong>Last Name:</strong> Trouba</p>
+                <p><strong>Date of Birth:</strong> 19 March 2006</p>
+                <p><strong>Address:</strong> 25 Avenue Jules Bianco, France</p>
+                <p><strong>Phone:</strong> +33 7 68 34 45 70</p>
+                <p><strong>Email:</strong> mael.trouba@gmail.com</p>
+                <p><strong>Driving License:</strong> B (car) BSR (CBT)</p>
+            </div>
+    
+            <!-- Section 2: Interests -->
+            <div class="section interests">
+                <h3>Interests</h3>
+                <ul>
+                    <li><strong>Sports:</strong> Freestyle scooter (4 years), Archery (2 years), Karate (3 years)</li>
+                    <li><strong>Travel:</strong> Spain</li>
+                </ul>
+            </div>
+    
+            <!-- Section 3: Experiences -->
+            <div class="section experiences">
+                <h3>Experiences</h3>
+                <ul>
+                    <li><strong>03/09/2024:</strong> Student council - Treasurer</li>
+                    <li><strong>04/10/2024:</strong> University project - Teamwork/Scrum, website development (HTML, CSS, JS) - 5 people</li>
+                    <li><strong>10/11/2019:</strong> Internship at a car garage - 5 people</li>
+                </ul>
+            </div>
+    
+            <!-- Section 4: Technical Skills -->
+            <div class="section">
+                <h3>Technical Skills</h3>
+                <ul class="skills-list">
+                    <li>
+                        <strong>Programming:</strong> Python, C#, C++, HTML/CSS/JavaScript
+                        <div class="progress-bar"><span style="width: 90%;"></span></div>
+                    </li>
+                    <li>
+                        <strong>Data Analysis:</strong> SQL for database, Advanced Excel (formulas)
+                        <div class="progress-bar"><span style="width: 80%;"></span></div>
+                    </li>
+                    <li>
+                        <strong>Networking:</strong> Understanding of protocols (TCP/IP...)
+                        <div class="progress-bar"><span style="width: 70%;"></span></div>
+                    </li>
+                    <li>
+                        <strong>System Administration:</strong> Managing Linux/Windows servers, Scripting (Bash, PowerShell)
+                        <div class="progress-bar"><span style="width: 85%;"></span></div>
+                    </li>
+                    <li>
+                        <strong>UX/UI Design:</strong> Design tools like Figma, Illustrator
+                        <div class="progress-bar"><span style="width: 75%;"></span></div>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Section 5: Soft Skills -->
+            <div class="section">
+                <h3>Soft Skills</h3>
+                <ul class="soft-skills">
+                    <li>I have good time management skills and am punctual.</li>
+                    <li>I am innovative, dynamic and confident.</li>
+                    <li>I am orderly, methodical and have strong organizational skills.</li>
+                </ul>
+            </div>
+    
+            <!-- Section 6: Competences -->
+            <div class="section">
+                <h3>Competences</h3>
+                <strong>Languages:</strong>
+                <ul>
+                    <li>English: 
+                        <div class="stars">
+                            <span></span><span></span><span></span><span class="inactive"></span><span class="inactive">
+                        </div>
+                    </li>
+                    <li>Spanish:
+                        <div class="stars">
+                            <span></span><span></span><span class="inactive"></span><span class="inactive"></span><span class="inactive"></span>
+                        </div>
+                    </li>
+                </ul>
+                <strong>Software Skills:</strong>
+                <ul>
+                    <li>Visual Studio</li>
+                    <li>Visual Studio Code</li>
+                    <li>Visual Paradigm</li>
+                    <li>Oracle VM VirtualBox</li>
+                    <li>PGAdmin</li>
+                </ul>
+            </div>
+    
+            <!-- Section 7: Formation -->
+            <div class="section">
+                <h3>Formation</h3>
+                <ul class="formation-list">
+                    <li>2024 -Second year in progress University of Savoy / IUT Annecy – Annecy-le-Vieux, France</li>
+                    <br>
+                    <li>2023 -French Baccalaureate (Lycée Polyvalent Réne Perrin, Ugine, France)</li>
+                </ul>
+            </div>
+    
+            <!-- Section 6: References -->
+            <div class="section">
+                <h3>References</h3>
+                <p>Mrs. Luc Damas, Annecy, IUT
+                    -IT Professor, University of Savoy, IUT Annecy / Annecy-Le-Vieux
+                  Mail : luc.damas@univ-smb.fr
+                  Tel : 00 00 00 00 00</p>
+                <br>
+                <p>Mrs. Benoit Diard, Annecy, IUT
+                    -IT Professor, University of Savoy, IUT Annecy / Annecy-Le-Vieux
+                  Mail : benoit.diard@univ-smb.fr
+                  Tel : 00 00 00 00 00</p>
+            </div>
+        </div>
+
+    </section>
+    <script src="../../script.js"></script>
+</body>
+</html>

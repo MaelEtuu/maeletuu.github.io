@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Asset/Icon/icon.png">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<header class="header-content">
+    <div class="container header-container">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <h1 class="name"><img src="Asset/Icon/code_logo.svg" alt="Logo"> TROUBA Mael</h1>
+        <h3 class="title">Game engine programmer </h3>
+        <button class="contact" onclick="openContactModal()">Contact me</button>
+    </div>
+</header>
+
+<div class="modal_overlay" hidden>
+    <div class="modal_contact">
+      <button class="close-btn" onclick="closeContactModal()">X</button>
+      
+      <label class="label" for="subject-contact">Subject</label>
+      <input id="subject-contact" class="subject-contact" placeholder="Subject" oninput="checkFormCompletion()">
+
+      <label class="label" for="content-contact">Email</label>
+      <input id="email-contact" class="email-contact" placeholder="Email" oninput="checkFormCompletion()">
+      
+      <label class="label" for="content-contact">Content</label>
+      <input id="content-contact" class="content-contact" placeholder="Content" oninput="checkFormCompletion()">
+      
+      <button id="submit-btn" class="submit-btn" onclick="closeContactModalSubmit()" disabled>Submit</button>
+    </div>
+  </div>
+  
+  <div id="toast" class="toast hidden"></div>
+
+<div id="star-container">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+</div>
+
+<aside id="sidebar">
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="./Public/templates/CV.html">CV</a></li>
+            <li><a href="./Public/templates/projet.html">Projets</a></li>
+        </ul>
+    </nav>
+    <div class="social">
+        <a href="https://github.com/MaelEtuu"><img class="img-social" src="Asset/Icon/github-icon.svg"></a>
+        <a href="mailto:mael.trouba@etu.univ-smb.fr">
+            <img class="img-social" src="Asset/Icon/gmail-icon.svg" alt="Gmail Icon">
+        </a>
+        <a href="https://www.linkedin.com/in/maël-trouba-66b2a633a/"><img class="img-social" src="Asset/Icon/linkedin-icon.svg"></a>
+        <a href="https://www.instagram.com/mael.trb73?igsh=MTI5ZHR0ZjUyYzR6bA%3D%3D&utm_source=qr"><img class="img-social" src="Asset/Icon/insta-icon.svg"></a>
+    </div>    
+</aside>
+
+<section id="about">
+    <div class="photo">
+        <img class="Photo-profil" src="Asset/Icon/Photo-profil.png">
+    </div>
+    <div class="container text-about">
+        <h2>About me</h2>
+        <p>I'm a passionate developer, specializing in web development and the creation of modern, efficient interfaces.</p>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
